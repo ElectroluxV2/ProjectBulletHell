@@ -1,3 +1,6 @@
 [submodule "cmake/sdl2"]
 	path = cmake/sdl2
 	url = https://github.com/sleepyspider1/sdl2-cmake-modules
+[submodule "lib/sdl2"]
+	path = lib/sdl2
+	url = https://github.com/libsdl-org/SDL

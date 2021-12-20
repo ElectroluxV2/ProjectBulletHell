@@ -1,7 +1,8 @@
 #include <SDL.h>
+#include <cstdio>
 
 int main() {
-    if (SDL_Init(SDL_INIT_VIDEO ) < 0) {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         return 1;
     }
@@ -20,9 +21,9 @@ int main() {
         return 3;
     }
 
-    SDL_BlitSurface(etiSurface, nullptr, screenSurface, nullptr);
+    SDL_BlitSurface(etiSurface,nullptr,screenSurface,nullptr);
     SDL_UpdateWindowSurface(window);
-    SDL_Delay( 2000 );
+    SDL_Delay(2000);
 
     SDL_FreeSurface(etiSurface);
     SDL_FreeSurface(screenSurface);
