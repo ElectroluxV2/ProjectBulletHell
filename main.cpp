@@ -23,7 +23,18 @@ int main() {
 
     SDL_BlitSurface(etiSurface,nullptr,screenSurface,nullptr);
     SDL_UpdateWindowSurface(window);
-    SDL_Delay(2000);
+
+
+    bool quit = false;
+    SDL_Event e;
+    while (!quit) {
+        while (SDL_PollEvent(&e)) {
+            if (e.type == SDL_QUIT) {
+                quit = true;
+            }
+        }
+    }
+
 
     SDL_FreeSurface(etiSurface);
     SDL_FreeSurface(screenSurface);
